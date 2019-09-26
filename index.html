@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>娇兰丝芙兰</title>
+  <script>
+
+    // if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+
+    //   var version = parseFloat(RegExp.$1);
+
+    //   if (version > 2.3) {
+    //     var phoneScale = parseInt(window.screen.width) / 640;
+
+    //     document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+    //   } else {
+    //     document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+    //   }
+    // } else {
+
+    //   document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+    // }
+    var phoneScale = parseInt(window.screen.width) / 640;
+
+    document.write('<meta name="viewport" content="width=640" user-scalable=no>');
+    var imgSrc = "__IMG__";
+  </script>
+  <link rel="stylesheet" href="__CSS__/main.css?v=11">
+  <link rel="stylesheet" href="__CSS__/animate.min.css">
+</head>
+
+<body style="height:100%; width:100% ">
+  <div class="box">
+    <div class="music play">
+      <audio src="__IMG__/audio.mp3" alt="" id="bgmusic"></audio>
+    </div>
+    <div class="loading ">
+      <img class="back" src="__IMG__/loading.png">
+      <img class="ico" src="__IMG__/icon.png" alt="" />
+      <p>0%</p>
+    </div>
+    <div class="index-box" id="s1" style="display: none;">
+      <div class="back"></div>
+      
+      <div class="seleted_box">
+        <div class=" animated box1 bounceIn">
+          <div class="icon">
+            <img src="__IMG__/one-icon.png" alt="">
+          </div>
+          <div class="icon-1">
+            <img src="__IMG__/one-ic.png" alt="">
+          </div>
+          <div class="writing">
+            <img src="__IMG__/one-word.png" alt="" class="wr ">
+            <div class="animated face flipY ">
+              <!-- <img src="__IMG__/face.png" class=" animated flipY delay-0-5s"> -->
+            </div>
+            <!-- <img src="__IMG__/face1.png" alt="" class=" face1  fadeIn1 animated delay-1s ">-->
+          </div>
+          <div class="been ">
+            <img src="__IMG__/been.gif?v=3.0" alt="">
+          </div>
+          <div class="writing-1">
+            <div class="word ">
+              <img src="__IMG__/one-worder1.png">
+            </div>
+            <div class="hold ">
+              <img src="__IMG__/hold.png">
+            </div>
+
+          </div>
+
+        </div>
+        <div class=" btn_one animated  fadeIn1  delay-1s">
+          <img src="__IMG__/btn.png" class=" animated  heartBeat">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="index-box" id="s2" style="display: none">
+      <div class="seleted_box">
+        <div class="two-1">
+          <img src="__IMG__/two_1.png" class="animated fadeIn1" />
+        </div>
+        <div class="two-1_1">
+          <img src="__IMG__/two_1_1.png" class="animated fadeIn1 delay-2s" />
+        </div>
+        <div class="been1">
+          <img src="__IMG__/2.gif">
+        </div>
+        <div class="two-s animated fadeIn1 delay-1s">
+          <img src="__IMG__/two-s.png" class="animated shake delay-1s">
+        </div>
+        <div class="two-2 animated fadeIn1 delay-1s">
+          <img src="__IMG__/two_2.png" class="animated shake delay-1s">
+        </div>
+        <div class="two-3 animated fadeIn1 delay-1s">
+          <img src="__IMG__/two_3.png" class="animated shake delay-1s">
+        </div>
+        <div class="bg" onClick="answerFun(1,0,this)"></div>
+        <div class="bg-1" onClick="answerFun(1,1,this)"></div>
+        <div class="bg-2" onClick="answerFun(1,2,this)"></div>
+        <div class="bg-3" onClick="answerFun(1,3,this)"></div>
+      </div>
+    </div>
+    <div class="index-box" id="s3" style="display: none">
+      <video id="video" style="" x5-playsinline="true" playsinline="true" webkit-playsinline="true"
+        src="__IMG__/video.mp4?v=2.0" preload></video>
+    </div>
+    <div class="index-box" id="s4" style="display: none">
+      <div class="seleted_box">
+        <div class="three-1">
+          <img src="__IMG__/three_1.png" class="animated fadeIn1  slower" />
+        </div>
+        <div class="three-1-1">
+          <img src="__IMG__/three_1_1.png" class="animated fadeIn1  delay-2s slower" />
+        </div>
+        <div class="been2">
+          <img src="__IMG__/3.gif">
+        </div>
+        <div class="three-2 animated fadeIn1 delay-1s">
+          <img src="__IMG__/three_2.png" class="animated shake delay-1s" />
+        </div>
+        <div class="qu"></div>
+        <div class="qu1"></div>
+      </div>
+    </div>
+    <div class="index-box" id="s5" style="display: none">
+      <video id="video2" src="__IMG__/video2.mp4?v=2.1" x5-playsinline="true" playsinline="true"
+        webkit-playsinline="true"></video>
+    </div>
+    <div class="index-box" id="s6" style="display: none">
+      <div class="seleted_box">
+        <div class="fours-1">
+          <img src="__IMG__/fours.png" alt="" class="animated fadeIn1 slower" />
+        </div>
+        <div class="fours-1-1">
+          <img src="__IMG__/fours_1.png" alt="" class="animated fadeIn1 delay-2s slower " />
+        </div>
+        <div class="fours-2 animated fadeIn1 delay-1s ">
+          <img src="__IMG__/fours_2.png" class="animated shake delay-1s " />
+        </div>
+        <div class="fours-3 animated fadeIn1 delay-1s">
+          <img src="__IMG__/fours_3.png" class="animated shake delay-1s " />
+        </div>
+        <div class="fu"></div>
+        <div class="fu1"></div>
+      </div>
+    </div>
+    <div class="index-box" id="s7" style="display: none">
+      <video id="video3" src="__IMG__/video3.mp4?v=2.2" x5-playsinline="true" playsinline="true"
+        webkit-playsinline="true"></video>
+    </div>
+    <div class="index-box" id="s8" style="display: none">
+      <div class="seleted_box">
+        <div class="five-1">
+          <img src="__IMG__/fiv.png" alt="" class="animated fadeIn1 delay-1s slower" />
+        </div>
+        <div class="five-1-1">
+          <img src="__IMG__/fiv_1_1.png" alt="" class="animated fadeIn1  delay-2s slower" />
+        </div>
+        <div class="fivs animated fadeIn1 delay-1s ">
+          <img src="__IMG__/fivs.png" class="animated shake  delay-1s" />
+        </div>
+        <div class="five-2 animated fadeIn1 delay-1s">
+          <img src="__IMG__/fiv_1.png" class="animated shake  delay-1s" />
+        </div>
+        <div class="fiv" onClick="answerFun(4,0,this)"></div>
+        <div class="fiv1" onClick="answerFun(4,1,this)"></div>
+        <div class="fiv2" onClick="answerFun(4,2,this)"></div>
+        <div class="fiv3" onClick="answerFun(4,3,this)"></div>
+      </div>
+    </div>
+    <div class="index-box s9">
+      <div class="seleted_box">
+        <div class="bg-box">
+          <div id="max_frame">
+            <div class="frame-1">
+              <img src="__IMG__/frame.png" alt="" />
+            </div>
+            <div class="frame-2">
+              <img src="__IMG__/far_6.png" alt="" />
+            </div>
+            <div class="frame-3">
+              <img src="__IMG__/far_21.png" alt="" />
+            </div>
+            <div class="frame-4">
+              <img src="__IMG__/far_2.png" alt="" class="last_one">
+           
+              <div class="touxiang">
+                <img src="__IMG__/new_one.png" class="new_one" />
+                <img src="__IMG__/new_two.png" class="new_two" />
+                <img src="__IMG__/new_fours.png" class="new_fours" />
+                <img src="__IMG__/new_three.png" class="new_three" />
+              </div>
+             
+              <img src="__IMG__/one-icon.png" alt="" class="ic_one">
+              <img src="__IMG__/one-ic.png" alt="" class="ic_two">
+              <img src="__IMG__/one-icon.png" alt="" class="ic_three">
+              <div class="been3">
+                <img src="__IMG__/4.gif" />
+              </div>
+            </div>
+            <div class="frame-5 mianshuang">
+              <img src="__IMG__/far_3.png" alt="" class="far_3"/>
+              <img src="__IMG__/far_31.png" alt="" class="far_31"/>
+              <img src="__IMG__/far_32.png" alt="" class="far_32"/>
+              <img src="__IMG__/far_33.png" alt="" class="far_33" />
+            </div>
+            <div class="frame-6" style="display: none">
+              <img src="__IMG__/preserve.png?v=2.5" class="pre-one" />
+              <img src="__IMG__/preserve_1.png?v=2.4" class="pre-two" />
+              <img src="__IMG__/preserve_2.png?v=2.3" class="pre-three" />
+            </div>
+          </div>
+        </div>
+        <div class="frame-imgs btn1">
+          <img src="__IMG__/far_5.png" />
+        </div>
+        <div class="frame-img btn2" >
+          <img src="__IMG__/far_4.jpg" />
+        </div>
+        <div class="last-word">
+          <img src="__IMG__/last-word.png" alt="" />
+        </div>
+        <div class="frame-8">
+          <img src="__IMG__/last.png" alt="" />
+        </div>
+          <img src="__IMG__/one.gif" class="fra_one">
+        <img class="saveImg" src="" />
+      </div>
+    </div>
+    <div class="index-box" id="s10">
+    </div>
+    <script src="__JS__/jquery.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+    <script src="__JS__/main.js"></script>
+    <script src="__JS__/html2canvas.min.js"></script>
+
+  </div>
+</body>
+
+</html>
